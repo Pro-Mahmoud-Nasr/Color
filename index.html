@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css" media="all">
+      * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+      #txt {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <title>Color Project</title>
+  </head>
+  <body>
+    <input type="text" name="txt" id="txt" value="" placeholder="Test your color" />
+    <script type="text/javascript" charset="utf-8">
+    
+      const myTxt = document.querySelector("#txt");
+      
+      window.onload = myTxt.focus();
+      myTxt.onkeyup = () => {
+        
+        document.documentElement.style.backgroundColor = myTxt.value;
+        myTxt.style.backgroundColor = myTxt.value;
+        
+      };
+      
+    </script>
+  </body>
+</html>
